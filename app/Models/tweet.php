@@ -9,4 +9,8 @@ class tweet extends Model
 {
     use HasFactory;
     protected $fillable = ['conteudo'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
